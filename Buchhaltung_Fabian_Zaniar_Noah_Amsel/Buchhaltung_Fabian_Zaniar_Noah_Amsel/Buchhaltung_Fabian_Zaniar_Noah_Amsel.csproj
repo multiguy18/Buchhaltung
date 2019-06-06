@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="Model\BuchungsSatzModel.cs" />
     <Compile Include="ViewModel\BuchungsSatzViewModel.cs" />
+    <Compile Include="ViewModel\Command.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\BuchungsSatzView.xaml.cs">
       <DependentUpon>BuchungsSatzView.xaml</DependentUpon>
