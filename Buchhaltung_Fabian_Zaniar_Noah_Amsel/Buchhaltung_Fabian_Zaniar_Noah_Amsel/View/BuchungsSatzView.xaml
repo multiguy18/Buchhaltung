@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Buchhaltung_Fabian_Zaniar_Noah_Amsel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Buchungssätze" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Content="Buchungssätze" HorizontalAlignment="Center" FontWeight="Bold" FontSize="22"/>
+        <DataGrid Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2"/>
+        <Button Grid.Column="1" Grid.Row="5" Content="Kontenplan öffnen" Margin="60, 0, 60, 0" />
+        <Button Grid.Column="2" Grid.Row="5" Content="Bilanz, ER öffnen" Margin="60, 0, 60, 0" />
     </Grid>
 </Window>

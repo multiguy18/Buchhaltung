@@ -15,14 +15,13 @@ using System.Windows.Shapes;
 
 namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.View
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class BuchungsSatzView : Window
     {
         public BuchungsSatzView()
         {
             InitializeComponent();
+
+            this.DataContext = new ViewModel.BuchungsSatzViewModel();
         }
     }
 }
