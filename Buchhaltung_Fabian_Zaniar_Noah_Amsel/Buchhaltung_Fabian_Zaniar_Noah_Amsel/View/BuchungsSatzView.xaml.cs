@@ -18,9 +18,9 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.View
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class BuchunsSatzView : Window
+    public partial class BuchungsSatzView : Window
     {
-        public BuchunsSatzView()
+        public BuchungsSatzView()
         {
             InitializeComponent();
         }

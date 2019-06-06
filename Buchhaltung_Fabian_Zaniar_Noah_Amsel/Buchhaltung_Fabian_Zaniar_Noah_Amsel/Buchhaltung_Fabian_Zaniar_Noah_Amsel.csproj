@@ -55,7 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="View\BuchunsSatzView.xaml">
+    <Page Include="View\BuchungsSatzView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -63,8 +63,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="View\BuchunsSatzView.xaml.cs">
-      <DependentUpon>BuchunsSatzView.xaml</DependentUpon>
+    <Compile Include="View\BuchungsSatzView.xaml.cs">
+      <DependentUpon>BuchungsSatzView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
