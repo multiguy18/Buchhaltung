@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel
+namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class BuchunsSatzView : Window
     {
-        public MainWindow()
+        public BuchunsSatzView()
         {
             InitializeComponent();
         }
