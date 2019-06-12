@@ -22,6 +22,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.View
         public KontenView()
         {
             InitializeComponent();
+
+            this.DataContext = new ViewModel.KontenViewModel();
         }
     }
 }
