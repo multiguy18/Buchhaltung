@@ -77,6 +77,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.View
         }
 
         internal System.Windows.Controls.Grid KontoGrid;
+        internal System.Windows.Controls.DataGrid DgLinks;
+        internal System.Windows.Controls.DataGrid DgRechts;
     }
 }
 

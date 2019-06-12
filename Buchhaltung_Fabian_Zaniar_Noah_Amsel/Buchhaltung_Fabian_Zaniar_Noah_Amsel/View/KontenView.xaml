@@ -34,6 +34,8 @@
 
                 <Label Grid.ColumnSpan="3" Background="Black"/>
                 <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
+                <DataGrid x:Name="DgLinks" Grid.Row="1" />
+                <DataGrid x:Name="DgRechts" Grid.Row="1" Grid.Column="2"/>
             </Grid>
         </Grid>
     </Grid>
