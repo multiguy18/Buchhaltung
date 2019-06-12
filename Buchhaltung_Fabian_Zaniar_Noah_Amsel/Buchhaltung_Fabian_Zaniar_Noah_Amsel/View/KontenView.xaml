@@ -1,0 +1,40 @@
+﻿<Window x:Class="Buchhaltung_Fabian_Zaniar_Noah_Amsel.View.KontenView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Buchhaltung_Fabian_Zaniar_Noah_Amsel.View"
+        mc:Ignorable="d"
+        Title="KontenView" Height="450" Width="800">
+    <Grid>
+        <Grid x:Name="KontoGrid" Width="100" Height="100">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="S" />
+            <Label Grid.Column="1" Content="ToDo" HorizontalAlignment="Center" />
+            <Label Grid.Column="2" Content="H" HorizontalAlignment="Right"/>
+
+            <Grid Grid.Row="1" Grid.ColumnSpan="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.ColumnSpan="3" Background="Black"/>
+                <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
