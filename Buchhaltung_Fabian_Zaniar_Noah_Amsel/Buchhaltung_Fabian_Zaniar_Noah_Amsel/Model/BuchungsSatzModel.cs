@@ -8,5 +8,11 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model
 {
     public class BuchungsSatzModel
     {
+        public void OpenKontenView()
+        {
+            View.KontenView view = new View.KontenView();
+            view.Show();
+        }
+
     }
 }

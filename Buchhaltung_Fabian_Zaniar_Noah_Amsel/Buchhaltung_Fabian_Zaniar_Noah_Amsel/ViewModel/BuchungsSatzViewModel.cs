@@ -47,7 +47,7 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
 
         private void OpenKtPlan()
         {
-            //Aufruf KontenPlan
+            this.model.OpenKontenView();
         }
 
         private void OpenBilanzER()
