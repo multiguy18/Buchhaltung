@@ -106,6 +106,7 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.View
         internal System.Windows.Controls.Grid DarlehensschuldGrid;
         internal System.Windows.Controls.Grid HypothekenGrid;
         internal System.Windows.Controls.Grid EigenkapitalGrid;
+        internal System.Windows.Controls.Button btReturn;
     }
 }
 
