@@ -98,6 +98,14 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.View
 
         internal System.Windows.Controls.Grid PostGrid;
         internal System.Windows.Controls.Grid BankGrid;
+        internal System.Windows.Controls.Grid FLLGrid;
+        internal System.Windows.Controls.Grid WarenbestandGrid;
+        internal System.Windows.Controls.Grid MobilienGrid;
+        internal System.Windows.Controls.Grid ImmobilienGrid;
+        internal System.Windows.Controls.Grid VLLGrid;
+        internal System.Windows.Controls.Grid DarlehensschuldGrid;
+        internal System.Windows.Controls.Grid HypothekenGrid;
+        internal System.Windows.Controls.Grid EigenkapitalGrid;
     }
 }
 

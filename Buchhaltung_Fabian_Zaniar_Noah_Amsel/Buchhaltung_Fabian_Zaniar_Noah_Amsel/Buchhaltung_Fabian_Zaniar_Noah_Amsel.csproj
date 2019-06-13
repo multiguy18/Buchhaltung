@@ -55,6 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\KontenModel.cs" />
+    <Compile Include="ViewModel\KontenViewModel.cs" />
+    <Compile Include="View\KontenView.xaml.cs">
+      <DependentUpon>KontenView.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\BuchungsSatzView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,6 +76,10 @@
       <DependentUpon>BuchungsSatzView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\KontenView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

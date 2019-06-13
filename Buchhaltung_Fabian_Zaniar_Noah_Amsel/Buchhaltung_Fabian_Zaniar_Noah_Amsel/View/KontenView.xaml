@@ -114,5 +114,261 @@
                 <DataGrid Grid.Row="1" Grid.Column="2"/>
             </Grid>
         </Grid>
+
+        <Grid x:Name="FLLGrid" Margin="7,7" Grid.Column="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="S" />
+            <Label Grid.Column="1" Content="FLL" HorizontalAlignment="Center" />
+            <Label Grid.Column="2" Content="H" HorizontalAlignment="Right"/>
+
+            <Grid Grid.Row="1" Grid.ColumnSpan="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.ColumnSpan="3" Background="Black"/>
+                <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
+                <DataGrid Grid.Row="1" />
+                <DataGrid Grid.Row="1" Grid.Column="2"/>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="WarenbestandGrid" Margin="7,7" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="S" />
+            <Label Grid.Column="1" Content="Warenbestand" HorizontalAlignment="Center" />
+            <Label Grid.Column="2" Content="H" HorizontalAlignment="Right"/>
+
+            <Grid Grid.Row="1" Grid.ColumnSpan="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.ColumnSpan="3" Background="Black"/>
+                <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
+                <DataGrid Grid.Row="1" />
+                <DataGrid Grid.Row="1" Grid.Column="2"/>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="MobilienGrid" Margin="7,7" Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="S" />
+            <Label Grid.Column="1" Content="Mobilien" HorizontalAlignment="Center" />
+            <Label Grid.Column="2" Content="H" HorizontalAlignment="Right"/>
+
+            <Grid Grid.Row="1" Grid.ColumnSpan="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.ColumnSpan="3" Background="Black"/>
+                <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
+                <DataGrid Grid.Row="1" />
+                <DataGrid Grid.Row="1" Grid.Column="2"/>
+            </Grid>
+        </Grid>
+        
+        <Grid x:Name="ImmobilienGrid" Margin="7,7" Grid.Row="1" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="S" />
+            <Label Grid.Column="1" Content="Immobilien" HorizontalAlignment="Center" />
+            <Label Grid.Column="2" Content="H" HorizontalAlignment="Right"/>
+
+            <Grid Grid.Row="1" Grid.ColumnSpan="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.ColumnSpan="3" Background="Black"/>
+                <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
+                <DataGrid Grid.Row="1" />
+                <DataGrid Grid.Row="1" Grid.Column="2"/>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="VLLGrid" Margin="7,7" Grid.Row="1" Grid.Column="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="S" />
+            <Label Grid.Column="1" Content="VLL" HorizontalAlignment="Center" />
+            <Label Grid.Column="2" Content="H" HorizontalAlignment="Right"/>
+
+            <Grid Grid.Row="1" Grid.ColumnSpan="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.ColumnSpan="3" Background="Black"/>
+                <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
+                <DataGrid Grid.Row="1" />
+                <DataGrid Grid.Row="1" Grid.Column="2"/>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="DarlehensschuldGrid" Margin="7,7" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="S" />
+            <Label Grid.Column="1" Content="Darlehensschuld" HorizontalAlignment="Center" />
+            <Label Grid.Column="2" Content="H" HorizontalAlignment="Right"/>
+
+            <Grid Grid.Row="1" Grid.ColumnSpan="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.ColumnSpan="3" Background="Black"/>
+                <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
+                <DataGrid Grid.Row="1" />
+                <DataGrid Grid.Row="1" Grid.Column="2"/>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="HypothekenGrid" Margin="7,7" Grid.Row="2" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="S" />
+            <Label Grid.Column="1" Content="Immobilien" HorizontalAlignment="Center" />
+            <Label Grid.Column="2" Content="H" HorizontalAlignment="Right"/>
+
+            <Grid Grid.Row="1" Grid.ColumnSpan="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.ColumnSpan="3" Background="Black"/>
+                <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
+                <DataGrid Grid.Row="1" />
+                <DataGrid Grid.Row="1" Grid.Column="2"/>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="EigenkapitalGrid" Margin="7,7" Grid.Row="2" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="S" />
+            <Label Grid.Column="1" Content="Eigenkapital" HorizontalAlignment="Center" />
+            <Label Grid.Column="2" Content="H" HorizontalAlignment="Right"/>
+
+            <Grid Grid.Row="1" Grid.ColumnSpan="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.ColumnSpan="3" Background="Black"/>
+                <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
+                <DataGrid Grid.Row="1" />
+                <DataGrid Grid.Row="1" Grid.Column="2"/>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
