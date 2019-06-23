@@ -55,7 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\Buchungssatz.cs" />
     <Compile Include="Model\KontenModel.cs" />
+    <Compile Include="Model\Konto.cs" />
     <Compile Include="ViewModel\KontenViewModel.cs" />
     <Compile Include="View\KontenView.xaml.cs">
       <DependentUpon>KontenView.xaml</DependentUpon>
