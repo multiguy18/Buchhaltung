@@ -52,7 +52,7 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
 
         private void OpenBilanzER()
         {
-            //Aufruf Bilanz View
+            this.model.OpenERBilanzView();
         }
     }
 }

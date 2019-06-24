@@ -14,5 +14,6 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         {
             this.model = new Model.BuchungsSatzModel();
         }
+
     }
 }

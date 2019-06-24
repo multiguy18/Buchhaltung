@@ -56,9 +56,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Buchungssatz.cs" />
+    <Compile Include="Model\ERBilanzModel.cs" />
     <Compile Include="Model\KontenModel.cs" />
     <Compile Include="Model\Konto.cs" />
+    <Compile Include="ViewModel\ERBilanzViewModel.cs" />
     <Compile Include="ViewModel\KontenViewModel.cs" />
+    <Compile Include="View\ERBilanzView.xaml.cs">
+      <DependentUpon>ERBilanzView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\KontenView.xaml.cs">
       <DependentUpon>KontenView.xaml</DependentUpon>
     </Compile>
@@ -78,6 +83,10 @@
       <DependentUpon>BuchungsSatzView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\ERBilanzView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\KontenView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

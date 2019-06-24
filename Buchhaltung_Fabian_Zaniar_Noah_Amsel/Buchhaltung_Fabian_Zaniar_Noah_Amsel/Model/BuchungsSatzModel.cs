@@ -14,5 +14,11 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model
             view.Show();
         }
 
+        public void OpenERBilanzView()
+        {
+            View.ERBilanzView view = new View.ERBilanzView();
+            view.Show();
+        }
+
     }
 }
