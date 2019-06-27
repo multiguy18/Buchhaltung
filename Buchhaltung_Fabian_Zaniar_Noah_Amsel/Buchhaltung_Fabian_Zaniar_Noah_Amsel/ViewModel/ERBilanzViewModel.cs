@@ -25,14 +25,14 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         }
 
         private List<string> _passivKontenFremd;
-        public List<string> passivKontenFremd
+        public List<string> PassivKontenFremd
         {
             get { return this._passivKontenFremd; }
             set { SetProperty(ref _passivKontenFremd, value); }
         }
 
         private List<string> _passivKontenEigen;
-        public List<string> passivKontenEigen
+        public List<string> PassivKontenEigen
         {
             get { return this._passivKontenEigen; }
             set { SetProperty(ref _passivKontenEigen, value); }
@@ -55,6 +55,13 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         public ERBilanzViewModel()
         {
             this.model = new Model.ERBilanzModel();
+
+            AktivKontenUmlauf = new List<string>();
+            AktivKontenAnlage = new List<string>();
+            PassivKontenFremd = new List<string>();
+            PassivKontenEigen = new List<string>();
+            AufwandKonten = new List<string>();
+            ErtragKonten = new List<string>();
         }
     }
 }
