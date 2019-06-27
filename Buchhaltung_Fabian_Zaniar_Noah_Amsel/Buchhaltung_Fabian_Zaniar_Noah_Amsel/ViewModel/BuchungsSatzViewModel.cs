@@ -1,4 +1,5 @@
-﻿using EileMitWeile.ViewModel;
+﻿using Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model;
+using EileMitWeile.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +15,11 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         public BuchungsSatzViewModel()
         {
             this.model = new Model.BuchungsSatzModel();
+            BuchungsSaetze = new List<BuchungssatzDataGridEntry>();
         }
 
-        private List<string> _buchungsSaetze;
-        public List<string> BuchungsSaetze
+        private List<BuchungssatzDataGridEntry> _buchungsSaetze;
+        public List<BuchungssatzDataGridEntry> BuchungsSaetze
         {
             get { return this._buchungsSaetze; }
             set { SetProperty(ref _buchungsSaetze, value); }

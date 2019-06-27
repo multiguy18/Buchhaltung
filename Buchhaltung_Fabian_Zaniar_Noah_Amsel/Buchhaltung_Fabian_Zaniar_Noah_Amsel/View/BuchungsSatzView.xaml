@@ -25,7 +25,7 @@
         </Grid.RowDefinitions>
 
         <Label Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Content="Buchungssätze" HorizontalAlignment="Center" FontWeight="Bold" FontSize="22"/>
-        <DataGrid Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2"/>
+        <DataGrid Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" ItemsSource="{Binding BuchungsSaetze}"/>
         <Button Grid.Column="1" Grid.Row="5" Content="Kontenplan öffnen" Margin="60, 0, 60, 0" Command="{Binding OpenKontenPlanCmd}"/>
         <Button Grid.Column="2" Grid.Row="5" Content="Bilanz, ER öffnen" Margin="60, 0, 60, 0" Command="{Binding OpenBilanzERCmd}" />
     </Grid>

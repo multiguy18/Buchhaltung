@@ -16,8 +16,20 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model
 
         public bool Kalkuliere()
         {
-            //TODO: Logik für Passiv- bzw. Aufwandskonto
-            if (Soll.DoUebertrag(Betrag) && Haben.DoUebertrag(Betrag))
+            float betragSoll = Betrag;
+            float betragHaben = -Betrag;
+
+            if (Soll.PassivAufwand)
+            {
+                betragSoll = -betragSoll;
+            }
+
+            if (Haben.PassivAufwand)
+            {
+                betragHaben = -betragHaben;
+            }
+
+            if (Soll.DoUebertrag(betragSoll) && Haben.DoUebertrag(betragHaben))
             {
                 return false;
             }

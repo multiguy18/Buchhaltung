@@ -10,19 +10,32 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
     {
         Model.ERBilanzModel model;
 
-        private List<string> _aktivKonten;
-
-        public List<string> AktivKonten
+        private List<string> _aktivKontenUmlauf;
+        public List<string> AktivKontenUmlauf
         {
-            get { return this._aktivKonten; }
-            set { SetProperty(ref _aktivKonten, value); }
+            get { return this._aktivKontenUmlauf; }
+            set { SetProperty(ref _aktivKontenUmlauf, value); }
         }
 
-        private List<string> _passivKonten;
-        public List<string> passivKonten
+        private List<string> _aktivKontenAnlage;
+        public List<string> AktivKontenAnlage
         {
-            get { return this._passivKonten; }
-            set { SetProperty(ref _passivKonten, value); }
+            get { return this._aktivKontenAnlage; }
+            set { SetProperty(ref _aktivKontenAnlage, value); }
+        }
+
+        private List<string> _passivKontenFremd;
+        public List<string> passivKontenFremd
+        {
+            get { return this._passivKontenFremd; }
+            set { SetProperty(ref _passivKontenFremd, value); }
+        }
+
+        private List<string> _passivKontenEigen;
+        public List<string> passivKontenEigen
+        {
+            get { return this._passivKontenEigen; }
+            set { SetProperty(ref _passivKontenEigen, value); }
         }
 
         private List<string> _aufwandKonten;
