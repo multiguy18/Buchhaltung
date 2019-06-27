@@ -62,6 +62,15 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             PassivKontenEigen = new List<string>();
             AufwandKonten = new List<string>();
             ErtragKonten = new List<string>();
+
+            AktivKontenUmlauf.Add("Kasse 20");
+            AktivKontenUmlauf.Add("Post 1500");
+            AktivKontenUmlauf.Add("Bank 800");
+            AktivKontenUmlauf.Add("FLL 20");
+            AktivKontenAnlage.Add("Immobilien 80");
+            AktivKontenAnlage.Add("Mobiliar 70");
+            PassivKontenFremd.Add("VLL 50");
+            PassivKontenEigen.Add("Eigenkapital 40 ");
         }
     }
 }
