@@ -3,9 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:mod="clr-namespace:Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model"
         xmlns:local="clr-namespace:Buchhaltung_Fabian_Zaniar_Noah_Amsel"
         mc:Ignorable="d"
         Title="Buchungssätze" Height="450" Width="800">
+    <Window.Resources>
+        <ObjectDataProvider x:Key="kontoname" 
+                        MethodName="GetNames" ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="mod:Kontoname" />
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -25,8 +35,31 @@
         </Grid.RowDefinitions>
 
         <Label Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Content="Buchungssätze" HorizontalAlignment="Center" FontWeight="Bold" FontSize="22"/>
-        <DataGrid Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" ItemsSource="{Binding BuchungsSaetze}"/>
+        <DataGrid Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" ItemsSource="{Binding BuchungsSaetze}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridComboBoxColumn Header="Soll" Width="1*"
+                                ItemsSource="{Binding Source={StaticResource kontoname}}"
+                                SelectedItemBinding="{Binding Soll}"/>
+                <DataGridComboBoxColumn Header="Haben" Width="1*"
+                                ItemsSource="{Binding Source={StaticResource kontoname}}"
+                                SelectedItemBinding="{Binding Haben}"/>
+                <DataGridTextColumn Header="Betrag" Width="1*"
+                                Binding="{Binding Betrag}"/>
+                <DataGridTextColumn Header="Zeitpunkt" Width="1*"
+                                Binding="{Binding Zeitpunkt, StringFormat='dd.MM.yyyy HH:mm'}"/>
+                <DataGridTemplateColumn Header="" Width="80">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Löschen"
+                                Command="Delete"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+            
+        </DataGrid>
         <Button Grid.Column="1" Grid.Row="5" Content="Kontenplan öffnen" Margin="60, 0, 60, 0" Command="{Binding OpenKontenPlanCmd}"/>
         <Button Grid.Column="2" Grid.Row="5" Content="Bilanz, ER öffnen" Margin="60, 0, 60, 0" Command="{Binding OpenBilanzERCmd}" />
     </Grid>
 </Window>
+    

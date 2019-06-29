@@ -11,6 +11,6 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model
         public Kontoname Soll { get; set; }
         public Kontoname Haben { get; set; }
         public float Betrag { get; set; }
-        public string Datum { get; set; }
+        public DateTime Zeitpunkt { get; set; }
     }
 }
