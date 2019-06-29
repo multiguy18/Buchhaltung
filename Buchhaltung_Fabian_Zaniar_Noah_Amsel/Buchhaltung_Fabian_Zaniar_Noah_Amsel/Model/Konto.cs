@@ -8,16 +8,19 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model
 {
     public class Konto
     {
+        public readonly Kontoname Name;
         public readonly Kontotyp Typ;
-        public readonly string Bezeichnung;
+        public readonly int RahmenNr;
         private float _anfangsbestand;
         private List<float> _aeanderungenPositiv;
         private List<float> _aeanderungenNegativ;
 
-        public Konto(string bezeichnung, Kontotyp typ)
+        public Konto(Kontoname name, Kontotyp typ, int rahmenNr)
         {
-            Bezeichnung = bezeichnung;
+            Name = name;
             Typ = typ;
+            RahmenNr = rahmenNr;
+            _anfangsbestand = 0;
             _aeanderungenPositiv = new List<float>();
             _aeanderungenNegativ = new List<float>();
         }

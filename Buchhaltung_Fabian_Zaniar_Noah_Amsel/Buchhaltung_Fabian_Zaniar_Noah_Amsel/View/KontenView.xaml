@@ -318,7 +318,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Label Content="S" />
-            <Label Grid.Column="1" Content="Immobilien" HorizontalAlignment="Center" />
+            <Label Grid.Column="1" Content="Hypotheken" HorizontalAlignment="Center" />
             <Label Grid.Column="2" Content="H" HorizontalAlignment="Right"/>
 
             <Grid Grid.Row="1" Grid.ColumnSpan="3">
