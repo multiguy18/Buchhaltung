@@ -8,15 +8,18 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model
 {
     public class Konto
     {
-        public readonly bool PassivAufwand;
+        public readonly Kontotyp Typ;
         public readonly string Bezeichnung;
         private float _anfangsbestand;
-        private List<float> _aeanderungen;
+        private List<float> _aeanderungenPositiv;
+        private List<float> _aeanderungenNegativ;
 
-        public Konto(string bezeichnung, bool passivAufwand)
+        public Konto(string bezeichnung, Kontotyp typ)
         {
             Bezeichnung = bezeichnung;
-            PassivAufwand = passivAufwand;
+            Typ = typ;
+            _aeanderungenPositiv = new List<float>();
+            _aeanderungenNegativ = new List<float>();
         }
 
         public float Schlussbestand { get; private set; }
@@ -31,15 +34,26 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model
             }
         }
 
-
-        public List<float> Aenderungen
+        public List<float> AenderungenPositiv
         {
-            get { return new List<float>(_aeanderungen); }
+            get { return new List<float>(_aeanderungenPositiv); }
+        }
+
+        public List<float> AenderungenNegativ
+        {
+            get { return new List<float>(_aeanderungenNegativ); }
         }
 
         public bool DoUebertrag(float betrag)
         {
-            _aeanderungen.Add(betrag);
+            if (betrag > 0)
+            {
+                _aeanderungenPositiv.Add(betrag);
+            }
+            else if (betrag < 0)
+            {
+                _aeanderungenNegativ.Add(betrag);
+            }
 
             Schlussbestand += betrag;
 
@@ -53,7 +67,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model
 
         public void ResetUebertraege()
         {
-            _aeanderungen.Clear();
+            _aeanderungenPositiv.Clear();
+            _aeanderungenNegativ.Clear();
             Schlussbestand = _anfangsbestand;
         }
     }

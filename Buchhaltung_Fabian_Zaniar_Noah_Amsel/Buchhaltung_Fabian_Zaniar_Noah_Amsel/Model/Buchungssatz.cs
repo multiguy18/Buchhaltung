@@ -19,12 +19,12 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model
             float betragSoll = Betrag;
             float betragHaben = -Betrag;
 
-            if (Soll.PassivAufwand)
+            if (Soll.Typ == Kontotyp.Fremdkapital || Soll.Typ == Kontotyp.Eigenkapital)
             {
                 betragSoll = -betragSoll;
             }
 
-            if (Haben.PassivAufwand)
+            if (Haben.Typ == Kontotyp.Fremdkapital || Haben.Typ == Kontotyp.Eigenkapital)
             {
                 betragHaben = -betragHaben;
             }
