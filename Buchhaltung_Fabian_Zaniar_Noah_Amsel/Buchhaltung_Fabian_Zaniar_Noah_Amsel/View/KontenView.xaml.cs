@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,11 +20,11 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.View
     /// </summary>
     public partial class KontenView : Window
     {
-        public KontenView()
+        public KontenView(List<Konto> konten)
         {
             InitializeComponent();
 
-            this.DataContext = new ViewModel.KontenViewModel();
+            this.DataContext = new ViewModel.KontenViewModel(konten);
         }
 
         private void btReturn_Click(object sender, RoutedEventArgs e)

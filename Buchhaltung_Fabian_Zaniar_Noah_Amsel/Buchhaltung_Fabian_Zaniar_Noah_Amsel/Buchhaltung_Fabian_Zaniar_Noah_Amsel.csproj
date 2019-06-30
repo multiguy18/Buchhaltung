@@ -58,6 +58,7 @@
     <Compile Include="Model\Buchungssatz.cs" />
     <Compile Include="Model\BuchungssatzDataGridEntry.cs" />
     <Compile Include="Model\ERBilanzModel.cs" />
+    <Compile Include="Model\EroeffnungsBilanzModel.cs" />
     <Compile Include="Model\KontenModel.cs" />
     <Compile Include="Model\Konto.cs" />
     <Compile Include="Model\KontoDataGridEntry.cs" />
@@ -67,6 +68,9 @@
     <Compile Include="ViewModel\KontenViewModel.cs" />
     <Compile Include="View\ERBilanzView.xaml.cs">
       <DependentUpon>ERBilanzView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EroeffnungsBilanzView.xaml.cs">
+      <DependentUpon>EroeffnungsBilanzView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\KontenView.xaml.cs">
       <DependentUpon>KontenView.xaml</DependentUpon>
@@ -88,6 +92,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\ERBilanzView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EroeffnungsBilanzView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

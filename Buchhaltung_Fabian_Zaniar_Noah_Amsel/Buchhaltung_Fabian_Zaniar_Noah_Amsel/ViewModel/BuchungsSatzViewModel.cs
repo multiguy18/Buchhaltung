@@ -34,11 +34,12 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             _konten.Add(new Konto(Kontoname.Bank, Kontotyp.Umlaufvermoegen, 1021));
             _konten.Add(new Konto(Kontoname.FLL, Kontotyp.Umlaufvermoegen, 1100));
             _konten.Add(new Konto(Kontoname.Warenbestand, Kontotyp.Anlagevermoegen, 1200));
-            _konten.Add(new Konto(Kontoname.Mobilien, Kontotyp.Umlaufvermoegen, 1510));
-            _konten.Add(new Konto(Kontoname.Immobilien, Kontotyp.Umlaufvermoegen, 1600));
+            _konten.Add(new Konto(Kontoname.Mobilien, Kontotyp.Anlagevermoegen, 1510));
+            _konten.Add(new Konto(Kontoname.Immobilien, Kontotyp.Anlagevermoegen, 1600));
             _konten.Add(new Konto(Kontoname.VLL, Kontotyp.Fremdkapital, 2000));
             _konten.Add(new Konto(Kontoname.Darlehensschuld, Kontotyp.Fremdkapital, 2400));
             _konten.Add(new Konto(Kontoname.Hypotheken, Kontotyp.Fremdkapital, 2401));
+            _konten.Add(new Konto(Kontoname.Eigenkapital, Kontotyp.Eigenkapital, 2800));
         }
 
         
@@ -126,12 +127,12 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
 
         private void OpenKtPlan()
         {
-            this.model.OpenKontenView();
+            this.model.OpenKontenView(_konten);
         }
 
         private void OpenBilanzER()
         {
-            this.model.OpenERBilanzView();
+            this.model.OpenERBilanzView(_konten);
         }
     }
 }

@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model
 {
-    public class KontoDataGridEntry
+    public class EroeffnungsBilanzModel
     {
-        public string Bezeichnung { get; set; }
-        public float Betrag { get; set; }
     }
 }

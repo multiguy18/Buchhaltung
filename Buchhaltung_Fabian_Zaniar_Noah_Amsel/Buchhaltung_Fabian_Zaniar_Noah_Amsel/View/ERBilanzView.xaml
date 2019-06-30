@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Buchhaltung_Fabian_Zaniar_Noah_Amsel.View"
         mc:Ignorable="d"
-        Title="ERBilanzView" Height="450" Width="800">
+        Title="Bilanz / Erfolgsrechnung" Height="450" Width="800">
 
     <Grid>
         <Grid.ColumnDefinitions>

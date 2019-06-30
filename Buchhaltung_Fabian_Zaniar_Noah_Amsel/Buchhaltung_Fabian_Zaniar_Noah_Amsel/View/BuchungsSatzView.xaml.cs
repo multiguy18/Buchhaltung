@@ -23,10 +23,10 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.View
             InitializeComponent();
 
             this.DataContext = new ViewModel.BuchungsSatzViewModel();
-            (DataContext as BuchungsSatzViewModel).ErrorMessageDialog += BuchungsSatzView_ErrorMessage;
+            (DataContext as BuchungsSatzViewModel).ErrorMessageDialog += BuchungsSatzView_ErrorMessageDialog;
         }
 
-        private void BuchungsSatzView_ErrorMessage(string message)
+        private void BuchungsSatzView_ErrorMessageDialog(string message)
         {
             MessageBox.Show(message, "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
         }

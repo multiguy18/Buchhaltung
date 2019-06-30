@@ -21,7 +21,7 @@
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -34,8 +34,8 @@
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Content="Buchungssätze" HorizontalAlignment="Center" FontWeight="Bold" FontSize="22"/>
-        <DataGrid Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" ItemsSource="{Binding BuchungsSaetze, Mode=TwoWay}" AutoGenerateColumns="False">
+        <Label Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Content="Buchungssätze" HorizontalAlignment="Center" FontWeight="Bold" FontSize="22"/>
+        <DataGrid Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" ItemsSource="{Binding BuchungsSaetze, Mode=TwoWay}" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridComboBoxColumn Header="Soll" Width="1*"
                                 ItemsSource="{Binding Source={StaticResource kontoname}}"
@@ -46,7 +46,7 @@
                 <DataGridTextColumn Header="Betrag" Width="1*"
                                 Binding="{Binding Betrag}"/>
                 <DataGridTextColumn Header="Zeitpunkt" Width="1*"
-                                Binding="{Binding Zeitpunkt, StringFormat='dd.MM.yyyy HH:mm', Mode=TwoWay}"/>
+                                Binding="{Binding Zeitpunkt, Mode=TwoWay}"/>
                 <DataGridTemplateColumn Header="" Width="80">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -56,10 +56,11 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
-            
+
         </DataGrid>
-        <Button Grid.Column="1" Grid.Row="5" Content="Kontenplan öffnen" Margin="60, 0, 60, 0" Command="{Binding OpenKontenPlanCmd}"/>
-        <Button Grid.Column="2" Grid.Row="5" Content="Bilanz, ER öffnen" Margin="60, 0, 60, 0" Command="{Binding OpenBilanzERCmd}" />
+        <Button Grid.Column="1" Grid.Row="5" Content="Eröffungsbilanz öffnen" Margin="60, 0, 60, 0" Command="{Binding OpenEroeffnungsBilanzCmd}"/>
+        <Button Grid.Column="2" Grid.Row="5" Content="Kontenplan öffnen" Margin="60, 0, 60, 0" Command="{Binding OpenKontenPlanCmd}"/>
+        <Button Grid.Column="3" Grid.Row="5" Content="Bilanz, ER öffnen" Margin="60, 0, 60, 0" Command="{Binding OpenBilanzERCmd}" />
     </Grid>
 </Window>
     

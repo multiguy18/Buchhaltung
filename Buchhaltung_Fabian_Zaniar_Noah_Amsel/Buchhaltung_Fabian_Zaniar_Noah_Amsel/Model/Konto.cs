@@ -55,7 +55,7 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model
             }
             else if (betrag < 0)
             {
-                _aeanderungenNegativ.Add(betrag);
+                _aeanderungenNegativ.Add(-betrag);
             }
 
             Schlussbestand += betrag;

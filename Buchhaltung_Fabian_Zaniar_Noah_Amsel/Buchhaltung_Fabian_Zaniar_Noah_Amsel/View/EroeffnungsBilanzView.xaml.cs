@@ -1,5 +1,4 @@
-﻿using Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,19 +15,13 @@ using System.Windows.Shapes;
 namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.View
 {
     /// <summary>
-    /// Interaktionslogik für ERBilanzView.xaml
+    /// Interaktionslogik für EroeffnungsBilanzView.xaml
     /// </summary>
-    public partial class ERBilanzView : Window
+    public partial class EroeffnungsBilanzView : Window
     {
-        public ERBilanzView(List<Konto> konten)
+        public EroeffnungsBilanzView()
         {
             InitializeComponent();
-
-            this.DataContext = new ViewModel.ERBilanzViewModel(konten);
-        }
-        private void btReturn_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }

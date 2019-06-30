@@ -8,15 +8,15 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model
 {
     public class BuchungsSatzModel
     {
-        public void OpenKontenView()
+        public void OpenKontenView(List<Konto> konten)
         {
-            View.KontenView view = new View.KontenView();
+            View.KontenView view = new View.KontenView(konten);
             view.Show();
         }
 
-        public void OpenERBilanzView()
+        public void OpenERBilanzView(List<Konto> konten)
         {
-            View.ERBilanzView view = new View.ERBilanzView();
+            View.ERBilanzView view = new View.ERBilanzView(konten);
             view.Show();
         }
 

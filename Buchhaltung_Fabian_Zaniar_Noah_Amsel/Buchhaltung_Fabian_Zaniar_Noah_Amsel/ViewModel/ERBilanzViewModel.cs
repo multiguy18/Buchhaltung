@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -52,7 +53,7 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             set { SetProperty(ref _ertragKonten, value); }
         }
 
-        public ERBilanzViewModel()
+        public ERBilanzViewModel(List<Konto> konten)
         {
             this.model = new Model.ERBilanzModel();
 
@@ -63,14 +64,25 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             AufwandKonten = new List<string>();
             ErtragKonten = new List<string>();
 
-            AktivKontenUmlauf.Add("Kasse 20");
-            AktivKontenUmlauf.Add("Post 1500");
-            AktivKontenUmlauf.Add("Bank 800");
-            AktivKontenUmlauf.Add("FLL 20");
-            AktivKontenAnlage.Add("Immobilien 80");
-            AktivKontenAnlage.Add("Mobiliar 70");
-            PassivKontenFremd.Add("VLL 50");
-            PassivKontenEigen.Add("Eigenkapital 40 ");
+            foreach (Konto umlaufKonto in konten.Where(k => k.Typ == Kontotyp.Umlaufvermoegen))
+            {
+                AktivKontenUmlauf.Add(umlaufKonto.Name.ToString("g") + "\t" + umlaufKonto.Schlussbestand);
+            }
+            
+            foreach (Konto anlageKonto in konten.Where(k => k.Typ == Kontotyp.Anlagevermoegen))
+            {
+                AktivKontenAnlage.Add(anlageKonto.Name.ToString("g") + "\t" + anlageKonto.Schlussbestand);
+            }
+
+            foreach (Konto fremdKonto in konten.Where(k => k.Typ == Kontotyp.Fremdkapital))
+            {
+                PassivKontenFremd.Add(fremdKonto.Name.ToString("g") + "\t" + fremdKonto.Schlussbestand);
+            }
+
+            foreach (Konto eigenKonto in konten.Where(k => k.Typ == Kontotyp.Eigenkapital))
+            {
+                PassivKontenEigen.Add(eigenKonto.Name.ToString("g") + "\t" + eigenKonto.Schlussbestand);
+            }
         }
     }
 }

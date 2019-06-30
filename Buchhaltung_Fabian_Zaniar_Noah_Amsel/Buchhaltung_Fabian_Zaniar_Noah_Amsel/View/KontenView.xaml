@@ -46,8 +46,34 @@
 
                 <Label Grid.ColumnSpan="3" Background="Black"/>
                 <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
-                <DataGrid Grid.Row="1" />
-                <DataGrid Grid.Row="1" Grid.Column="2"/>
+                <DataGrid Grid.Row="1" ItemsSource="{Binding KasseSoll}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid Grid.Row="1" Grid.Column="2" ItemsSource="{Binding KasseHaben}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
         </Grid>
         
@@ -78,8 +104,34 @@
 
                 <Label Grid.ColumnSpan="3" Background="Black"/>
                 <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
-                <DataGrid Grid.Row="1" />
-                <DataGrid Grid.Row="1" Grid.Column="2"/>
+                <DataGrid Grid.Row="1" ItemsSource="{Binding PostSoll}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid Grid.Row="1" Grid.Column="2" ItemsSource="{Binding PostHaben}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}"/>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
         </Grid>
 
@@ -110,8 +162,34 @@
 
                 <Label Grid.ColumnSpan="3" Background="Black"/>
                 <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
-                <DataGrid Grid.Row="1" />
-                <DataGrid Grid.Row="1" Grid.Column="2"/>
+                <DataGrid Grid.Row="1" ItemsSource="{Binding BankSoll}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid Grid.Row="1" Grid.Column="2" ItemsSource="{Binding BankHaben}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
         </Grid>
 
@@ -142,8 +220,34 @@
 
                 <Label Grid.ColumnSpan="3" Background="Black"/>
                 <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
-                <DataGrid Grid.Row="1" />
-                <DataGrid Grid.Row="1" Grid.Column="2"/>
+                <DataGrid Grid.Row="1" ItemsSource="{Binding FLLSoll}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid Grid.Row="1" Grid.Column="2" ItemsSource="{Binding FLLHaben}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
         </Grid>
 
@@ -174,8 +278,34 @@
 
                 <Label Grid.ColumnSpan="3" Background="Black"/>
                 <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
-                <DataGrid Grid.Row="1" />
-                <DataGrid Grid.Row="1" Grid.Column="2"/>
+                <DataGrid Grid.Row="1" ItemsSource="{Binding WarenbestandSoll}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid Grid.Row="1" Grid.Column="2" ItemsSource="{Binding WarenbestandHaben}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
         </Grid>
 
@@ -206,8 +336,34 @@
 
                 <Label Grid.ColumnSpan="3" Background="Black"/>
                 <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
-                <DataGrid Grid.Row="1" />
-                <DataGrid Grid.Row="1" Grid.Column="2"/>
+                <DataGrid Grid.Row="1" ItemsSource="{Binding MobilienSoll}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid Grid.Row="1" Grid.Column="2" ItemsSource="{Binding MobilienHaben}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
         </Grid>
         
@@ -238,8 +394,34 @@
 
                 <Label Grid.ColumnSpan="3" Background="Black"/>
                 <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
-                <DataGrid Grid.Row="1" />
-                <DataGrid Grid.Row="1" Grid.Column="2"/>
+                <DataGrid Grid.Row="1" ItemsSource="{Binding ImmobilienSoll}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid Grid.Row="1" Grid.Column="2" ItemsSource="{Binding ImmobilienHaben}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
         </Grid>
 
@@ -270,8 +452,34 @@
 
                 <Label Grid.ColumnSpan="3" Background="Black"/>
                 <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
-                <DataGrid Grid.Row="1" />
-                <DataGrid Grid.Row="1" Grid.Column="2"/>
+                <DataGrid Grid.Row="1" ItemsSource="{Binding VLLSoll}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid Grid.Row="1" Grid.Column="2" ItemsSource="{Binding VLLHaben}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
         </Grid>
 
@@ -302,8 +510,34 @@
 
                 <Label Grid.ColumnSpan="3" Background="Black"/>
                 <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
-                <DataGrid Grid.Row="1" />
-                <DataGrid Grid.Row="1" Grid.Column="2"/>
+                <DataGrid Grid.Row="1" ItemsSource="{Binding DarlehensschuldSoll}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid Grid.Row="1" Grid.Column="2" ItemsSource="{Binding DarlehensschuldHaben}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
         </Grid>
 
@@ -334,8 +568,34 @@
 
                 <Label Grid.ColumnSpan="3" Background="Black"/>
                 <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
-                <DataGrid Grid.Row="1" />
-                <DataGrid Grid.Row="1" Grid.Column="2"/>
+                <DataGrid Grid.Row="1" ItemsSource="{Binding HypothekenSoll}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid Grid.Row="1" Grid.Column="2" ItemsSource="{Binding HypothekenHaben}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
         </Grid>
 
@@ -366,8 +626,34 @@
 
                 <Label Grid.ColumnSpan="3" Background="Black"/>
                 <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
-                <DataGrid Grid.Row="1" />
-                <DataGrid Grid.Row="1" Grid.Column="2"/>
+                <DataGrid Grid.Row="1" ItemsSource="{Binding EigenkapitalSoll}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid Grid.Row="1" Grid.Column="2" ItemsSource="{Binding EigenkapitalHaben}" AutoGenerateColumns="False" GridLinesVisibility="None" HeadersVisibility="None" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="" Width="2*"
+                                Binding="{Binding Betrag}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="" Width="1*"
+                                Binding="{Binding Bezeichnung}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
         </Grid>
 

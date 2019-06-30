@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Zaniko\Desktop\Buchhaltung-master\Buchhaltung_Fabian_Zaniar_Noah_Amsel\Buchhaltung_Fabian_Zaniar_Noah_Amsel\obj\Debug\
+C:\Dev\Buchhaltung\Buchhaltung_Fabian_Zaniar_Noah_Amsel\Buchhaltung_Fabian_Zaniar_Noah_Amsel\obj\Debug\
 Buchhaltung_Fabian_Zaniar_Noah_Amsel
 none
 false
 DEBUG;TRACE
-C:\Users\Zaniko\Desktop\Buchhaltung-master\Buchhaltung_Fabian_Zaniar_Noah_Amsel\Buchhaltung_Fabian_Zaniar_Noah_Amsel\App.xaml
-3832307980
+C:\Dev\Buchhaltung\Buchhaltung_Fabian_Zaniar_Noah_Amsel\Buchhaltung_Fabian_Zaniar_Noah_Amsel\App.xaml
+4-208406984
 
-20-704183036
+27-330179712
 131569487696
-View\BuchungsSatzView.xaml;View\ERBilanzView.xaml;View\KontenView.xaml;
+View\BuchungsSatzView.xaml;View\ERBilanzView.xaml;View\EroeffnungsBilanzView.xaml;View\KontenView.xaml;
 
-True
+False
 
