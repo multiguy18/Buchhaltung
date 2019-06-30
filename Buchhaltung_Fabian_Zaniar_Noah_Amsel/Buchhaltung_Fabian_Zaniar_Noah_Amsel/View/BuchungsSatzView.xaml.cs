@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,12 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.View
             InitializeComponent();
 
             this.DataContext = new ViewModel.BuchungsSatzViewModel();
+            (DataContext as BuchungsSatzViewModel).ErrorMessageDialog += BuchungsSatzView_ErrorMessage;
+        }
+
+        private void BuchungsSatzView_ErrorMessage(string message)
+        {
+            MessageBox.Show(message, "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }

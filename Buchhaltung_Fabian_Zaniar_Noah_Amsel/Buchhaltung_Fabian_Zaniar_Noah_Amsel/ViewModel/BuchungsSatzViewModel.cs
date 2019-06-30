@@ -15,9 +15,12 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         private List<Konto> _konten;
         Model.BuchungsSatzModel model;
 
+        public event Action<string> ErrorMessageDialog;
+
         public BuchungsSatzViewModel()
         {
             this.model = new Model.BuchungsSatzModel();
+
             BuchungsSaetze = new ObservableCollection<BuchungssatzDataGridEntry>();
 
             BuchungsSaetze.CollectionChanged += BuchungsSaetze_CollectionChanged;
@@ -71,33 +74,43 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
 
         private void DataGridChanged()
         {
-            foreach (BuchungssatzDataGridEntry buchungssatzEntry in BuchungsSaetze)
+            foreach (Konto konto in _konten)
             {
-                bool hit;
+                konto.ResetUebertraege();
+            }
 
-                Konto kontoSoll = _konten.Single(k => k.Name == buchungssatzEntry.Soll);
-                Konto kontoHaben = _konten.Single(k => k.Name == buchungssatzEntry.Haben);
-
-                float betragSoll = buchungssatzEntry.Betrag;
-                float betragHaben = -buchungssatzEntry.Betrag;
-
-                if (kontoSoll.Typ == Kontotyp.Fremdkapital || kontoSoll.Typ == Kontotyp.Eigenkapital)
+            try
+            {
+                for (int i = 0; i < BuchungsSaetze.Count; i++)
                 {
-                    betragSoll = -betragSoll;
+                    BuchungssatzDataGridEntry buchungssatzEntry = BuchungsSaetze[i];
+
+                    Konto kontoSoll = _konten.Single(k => k.Name == buchungssatzEntry.Soll);
+                    Konto kontoHaben = _konten.Single(k => k.Name == buchungssatzEntry.Haben);
+
+                    float betragSoll = buchungssatzEntry.Betrag;
+                    float betragHaben = -buchungssatzEntry.Betrag;
+
+                    if (kontoSoll.Typ == Kontotyp.Fremdkapital || kontoSoll.Typ == Kontotyp.Eigenkapital)
+                    {
+                        betragSoll = -betragSoll;
+                    }
+
+                    if (kontoHaben.Typ == Kontotyp.Fremdkapital || kontoHaben.Typ == Kontotyp.Eigenkapital)
+                    {
+                        betragHaben = -betragHaben;
+                    }
+
+                    if (!kontoSoll.DoUebertrag(betragSoll) || !kontoHaben.DoUebertrag(betragHaben))
+                    {
+                        throw new Exception("Der Buchungssatz mit der Nummer " + (i + 1) +" fühte zu einem negativen Schlussbestand " +
+                            "in einem der beiden Konten. Die Berechnung wurde gestoppt.");
+                    }
                 }
-
-                if (kontoHaben.Typ == Kontotyp.Fremdkapital || kontoHaben.Typ == Kontotyp.Eigenkapital)
-                {
-                    betragHaben = -betragHaben;
-                }
-
-                if (kontoSoll.DoUebertrag(betragSoll) && kontoHaben.DoUebertrag(betragHaben))
-                {
-                    hit = false;
-                }
-
-
-                hit = false;
+            }
+            catch (Exception ex)
+            {
+                ErrorMessageDialog(ex.Message);
             }
         }
 
