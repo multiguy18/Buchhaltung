@@ -50,7 +50,7 @@
                 <DataGrid Grid.Row="2" Grid.Column="2" MinHeight="108" ItemsSource="{Binding Path=PassivKontenFremd}" AutoGenerateColumns="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Binding="{Binding}" 
-                                Foreground="Black" Width="*" Header="" IsReadOnly="true">
+                                Foreground="Black" Width="*" Header="">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="TextBlock">
                                     <Setter Property="HorizontalAlignment" Value="Right"></Setter>
@@ -62,7 +62,7 @@
                 <DataGrid Grid.Row="2" Grid.Column="0" MinHeight="108" ItemsSource="{Binding Path=AktivKontenUmlauf}" AutoGenerateColumns="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Binding="{Binding}" 
-                                Foreground="Black" Width="*" Header="" IsReadOnly="true">
+                                Foreground="Black" Width="*" Header="">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="TextBlock">
                                     <Setter Property="HorizontalAlignment" Value="Right"></Setter>
@@ -74,7 +74,7 @@
                 <DataGrid Grid.Row="4" MinHeight="108" ItemsSource="{Binding Path=AktivKontenAnlage}" AutoGenerateColumns="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Binding="{Binding}" 
-                                Foreground="Black" Width="*" Header="" IsReadOnly="true">
+                                Foreground="Black" Width="*" Header="">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="TextBlock">
                                     <Setter Property="HorizontalAlignment" Value="Right"></Setter>
@@ -86,7 +86,7 @@
                 <DataGrid Grid.Row="4" Grid.Column="2" MinHeight="108" ItemsSource="{Binding Path=PassivKontenEigen}" AutoGenerateColumns="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Binding="{Binding}" 
-                                Foreground="Black" Width="*" Header="" IsReadOnly="true">
+                                Foreground="Black" Width="*" Header="">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="TextBlock">
                                     <Setter Property="HorizontalAlignment" Value="Right"></Setter>
