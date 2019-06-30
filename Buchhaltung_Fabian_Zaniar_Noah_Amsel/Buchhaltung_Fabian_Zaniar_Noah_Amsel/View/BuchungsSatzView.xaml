@@ -35,7 +35,7 @@
         </Grid.RowDefinitions>
 
         <Label Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Content="Buchungssätze" HorizontalAlignment="Center" FontWeight="Bold" FontSize="22"/>
-        <DataGrid Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" ItemsSource="{Binding BuchungsSaetze}" AutoGenerateColumns="False">
+        <DataGrid Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" ItemsSource="{Binding BuchungsSaetze, Mode=TwoWay}" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridComboBoxColumn Header="Soll" Width="1*"
                                 ItemsSource="{Binding Source={StaticResource kontoname}}"
@@ -46,7 +46,7 @@
                 <DataGridTextColumn Header="Betrag" Width="1*"
                                 Binding="{Binding Betrag}"/>
                 <DataGridTextColumn Header="Zeitpunkt" Width="1*"
-                                Binding="{Binding Zeitpunkt, StringFormat='dd.MM.yyyy HH:mm'}"/>
+                                Binding="{Binding Zeitpunkt, StringFormat='dd.MM.yyyy HH:mm', Mode=TwoWay}"/>
                 <DataGridTemplateColumn Header="" Width="80">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

@@ -8,7 +8,15 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model
 {
     public class Buchungssatz
     {
-        public int Nummer; //Brauchts das?
+        public Buchungssatz(Konto soll, Konto haben, float betrag, DateTime zeitpunkt)
+        {
+            Soll = soll;
+            Haben = haben;
+            Betrag = betrag;
+            Zeitpunkt = zeitpunkt;
+        }
+
+        //public int Nummer; //Brauchts das?
         public Konto Soll;
         public Konto Haben;
         public float Betrag;
