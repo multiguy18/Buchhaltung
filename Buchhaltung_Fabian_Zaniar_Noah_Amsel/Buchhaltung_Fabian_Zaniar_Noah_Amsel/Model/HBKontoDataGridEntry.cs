@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model
 {
-    public class KontoDataGridEntry
+    public class HBKontoDataGridEntry
     {
         public string Bezeichnung { get; set; }
         public float Betrag { get; set; }

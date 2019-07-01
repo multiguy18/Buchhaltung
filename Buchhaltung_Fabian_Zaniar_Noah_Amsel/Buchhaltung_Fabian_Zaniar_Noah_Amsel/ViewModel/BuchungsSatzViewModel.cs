@@ -51,6 +51,17 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             set { SetProperty(ref _buchungsSaetze, value); }
         }
 
+        public Command OpenEroeffnungsBilanzCmd
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    OpenEroeffnungsBilanz();
+                });
+            }
+        }
+
         public Command OpenKontenPlanCmd
         {
             get
@@ -123,6 +134,11 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         private void BuchungssatzDataGridEntry_OnRowChanged(object sender, EventArgs e)
         {
             DataGridChanged();
+        }
+
+        private void OpenEroeffnungsBilanz()
+        {
+            this.model.OpenEroeffnungsBilanzView(_konten);
         }
 
         private void OpenKtPlan()

@@ -15,28 +15,28 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         {
             this.model = new Model.BuchungsSatzModel();
 
-            KasseSoll = new List<KontoDataGridEntry>();
-            KasseHaben = new List<KontoDataGridEntry>();
-            PostSoll = new List<KontoDataGridEntry>();
-            PostHaben = new List<KontoDataGridEntry>();
-            BankSoll = new List<KontoDataGridEntry>();
-            BankHaben = new List<KontoDataGridEntry>();
-            FLLSoll = new List<KontoDataGridEntry>();
-            FLLHaben = new List<KontoDataGridEntry>();
-            WarenbestandSoll = new List<KontoDataGridEntry>();
-            WarenbestandHaben = new List<KontoDataGridEntry>();
-            MobilienSoll = new List<KontoDataGridEntry>();
-            MobilienHaben = new List<KontoDataGridEntry>();
-            ImmobilienSoll = new List<KontoDataGridEntry>();
-            ImmobilienHaben = new List<KontoDataGridEntry>();
-            VLLSoll = new List<KontoDataGridEntry>();
-            VLLHaben = new List<KontoDataGridEntry>();
-            DarlehensschuldSoll = new List<KontoDataGridEntry>();
-            DarlehensschuldHaben = new List<KontoDataGridEntry>();
-            HypothekenSoll = new List<KontoDataGridEntry>();
-            HypothekenHaben = new List<KontoDataGridEntry>();
-            EigenkapitalSoll = new List<KontoDataGridEntry>();
-            EigenkapitalHaben = new List<KontoDataGridEntry>();
+            KasseSoll = new List<HBKontoDataGridEntry>();
+            KasseHaben = new List<HBKontoDataGridEntry>();
+            PostSoll = new List<HBKontoDataGridEntry>();
+            PostHaben = new List<HBKontoDataGridEntry>();
+            BankSoll = new List<HBKontoDataGridEntry>();
+            BankHaben = new List<HBKontoDataGridEntry>();
+            FLLSoll = new List<HBKontoDataGridEntry>();
+            FLLHaben = new List<HBKontoDataGridEntry>();
+            WarenbestandSoll = new List<HBKontoDataGridEntry>();
+            WarenbestandHaben = new List<HBKontoDataGridEntry>();
+            MobilienSoll = new List<HBKontoDataGridEntry>();
+            MobilienHaben = new List<HBKontoDataGridEntry>();
+            ImmobilienSoll = new List<HBKontoDataGridEntry>();
+            ImmobilienHaben = new List<HBKontoDataGridEntry>();
+            VLLSoll = new List<HBKontoDataGridEntry>();
+            VLLHaben = new List<HBKontoDataGridEntry>();
+            DarlehensschuldSoll = new List<HBKontoDataGridEntry>();
+            DarlehensschuldHaben = new List<HBKontoDataGridEntry>();
+            HypothekenSoll = new List<HBKontoDataGridEntry>();
+            HypothekenHaben = new List<HBKontoDataGridEntry>();
+            EigenkapitalSoll = new List<HBKontoDataGridEntry>();
+            EigenkapitalHaben = new List<HBKontoDataGridEntry>();
 
 
             GenerateKontoEntries(konten.Single(k => k.Name == Kontoname.Kasse), "Kasse");
@@ -53,8 +53,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         }
 
         #region ViewModelProperties
-        private List<KontoDataGridEntry> _kasseSoll;
-        public List<KontoDataGridEntry> KasseSoll
+        private List<HBKontoDataGridEntry> _kasseSoll;
+        public List<HBKontoDataGridEntry> KasseSoll
         {
             get { return _kasseSoll; }
             set
@@ -63,8 +63,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             }
         }
 
-        private List<KontoDataGridEntry> _kasseHaben;
-        public List<KontoDataGridEntry> KasseHaben
+        private List<HBKontoDataGridEntry> _kasseHaben;
+        public List<HBKontoDataGridEntry> KasseHaben
         {
             get { return _kasseHaben; }
             set
@@ -74,8 +74,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         }
 
 
-        private List<KontoDataGridEntry> _postSoll;
-        public List<KontoDataGridEntry> PostSoll
+        private List<HBKontoDataGridEntry> _postSoll;
+        public List<HBKontoDataGridEntry> PostSoll
         {
             get { return _postSoll; }
             set
@@ -84,8 +84,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             }
         }
 
-        private List<KontoDataGridEntry> _postHaben;
-        public List<KontoDataGridEntry> PostHaben
+        private List<HBKontoDataGridEntry> _postHaben;
+        public List<HBKontoDataGridEntry> PostHaben
         {
             get { return _postHaben; }
             set
@@ -95,8 +95,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         }
 
 
-        private List<KontoDataGridEntry> _bankSoll;
-        public List<KontoDataGridEntry> BankSoll
+        private List<HBKontoDataGridEntry> _bankSoll;
+        public List<HBKontoDataGridEntry> BankSoll
         {
             get { return _bankSoll; }
             set
@@ -105,8 +105,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             }
         }
 
-        private List<KontoDataGridEntry> _bankHaben;
-        public List<KontoDataGridEntry> BankHaben
+        private List<HBKontoDataGridEntry> _bankHaben;
+        public List<HBKontoDataGridEntry> BankHaben
         {
             get { return _bankHaben; }
             set
@@ -116,8 +116,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         }
 
 
-        private List<KontoDataGridEntry> _fllSoll;
-        public List<KontoDataGridEntry> FLLSoll
+        private List<HBKontoDataGridEntry> _fllSoll;
+        public List<HBKontoDataGridEntry> FLLSoll
         {
             get { return _fllSoll; }
             set
@@ -126,8 +126,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             }
         }
 
-        private List<KontoDataGridEntry> _fllHaben;
-        public List<KontoDataGridEntry> FLLHaben
+        private List<HBKontoDataGridEntry> _fllHaben;
+        public List<HBKontoDataGridEntry> FLLHaben
         {
             get { return _fllHaben; }
             set
@@ -137,8 +137,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         }
 
 
-        private List<KontoDataGridEntry> _warenbestandSoll;
-        public List<KontoDataGridEntry> WarenbestandSoll
+        private List<HBKontoDataGridEntry> _warenbestandSoll;
+        public List<HBKontoDataGridEntry> WarenbestandSoll
         {
             get { return _warenbestandSoll; }
             set
@@ -147,8 +147,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             }
         }
 
-        private List<KontoDataGridEntry> _warenbestandHaben;
-        public List<KontoDataGridEntry> WarenbestandHaben
+        private List<HBKontoDataGridEntry> _warenbestandHaben;
+        public List<HBKontoDataGridEntry> WarenbestandHaben
         {
             get { return _warenbestandHaben; }
             set
@@ -158,8 +158,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         }
 
 
-        private List<KontoDataGridEntry> _mobilienSoll;
-        public List<KontoDataGridEntry> MobilienSoll
+        private List<HBKontoDataGridEntry> _mobilienSoll;
+        public List<HBKontoDataGridEntry> MobilienSoll
         {
             get { return _mobilienSoll; }
             set
@@ -168,8 +168,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             }
         }
 
-        private List<KontoDataGridEntry> _mobilienHaben;
-        public List<KontoDataGridEntry> MobilienHaben
+        private List<HBKontoDataGridEntry> _mobilienHaben;
+        public List<HBKontoDataGridEntry> MobilienHaben
         {
             get { return _mobilienHaben; }
             set
@@ -179,8 +179,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         }
 
 
-        private List<KontoDataGridEntry> _immobilienSoll;
-        public List<KontoDataGridEntry> ImmobilienSoll
+        private List<HBKontoDataGridEntry> _immobilienSoll;
+        public List<HBKontoDataGridEntry> ImmobilienSoll
         {
             get { return _immobilienSoll; }
             set
@@ -189,8 +189,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             }
         }
 
-        private List<KontoDataGridEntry> _immobilienHaben;
-        public List<KontoDataGridEntry> ImmobilienHaben
+        private List<HBKontoDataGridEntry> _immobilienHaben;
+        public List<HBKontoDataGridEntry> ImmobilienHaben
         {
             get { return _immobilienHaben; }
             set
@@ -200,8 +200,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         }
 
 
-        private List<KontoDataGridEntry> _vllSoll;
-        public List<KontoDataGridEntry> VLLSoll
+        private List<HBKontoDataGridEntry> _vllSoll;
+        public List<HBKontoDataGridEntry> VLLSoll
         {
             get { return _vllSoll; }
             set
@@ -210,8 +210,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             }
         }
 
-        private List<KontoDataGridEntry> _vllHaben;
-        public List<KontoDataGridEntry> VLLHaben
+        private List<HBKontoDataGridEntry> _vllHaben;
+        public List<HBKontoDataGridEntry> VLLHaben
         {
             get { return _vllHaben; }
             set
@@ -221,8 +221,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         }
 
 
-        private List<KontoDataGridEntry> _darlehensschuldSoll;
-        public List<KontoDataGridEntry> DarlehensschuldSoll
+        private List<HBKontoDataGridEntry> _darlehensschuldSoll;
+        public List<HBKontoDataGridEntry> DarlehensschuldSoll
         {
             get { return _darlehensschuldSoll; }
             set
@@ -231,8 +231,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             }
         }
 
-        private List<KontoDataGridEntry> _darlehensschuldHaben;
-        public List<KontoDataGridEntry> DarlehensschuldHaben
+        private List<HBKontoDataGridEntry> _darlehensschuldHaben;
+        public List<HBKontoDataGridEntry> DarlehensschuldHaben
         {
             get { return _darlehensschuldHaben; }
             set
@@ -242,8 +242,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         }
 
 
-        private List<KontoDataGridEntry> _hypothekenSoll;
-        public List<KontoDataGridEntry> HypothekenSoll
+        private List<HBKontoDataGridEntry> _hypothekenSoll;
+        public List<HBKontoDataGridEntry> HypothekenSoll
         {
             get { return _hypothekenSoll; }
             set
@@ -252,8 +252,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             }
         }
 
-        private List<KontoDataGridEntry> _hypothekenHaben;
-        public List<KontoDataGridEntry> HypothekenHaben
+        private List<HBKontoDataGridEntry> _hypothekenHaben;
+        public List<HBKontoDataGridEntry> HypothekenHaben
         {
             get { return _hypothekenHaben; }
             set
@@ -263,8 +263,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         }
 
 
-        private List<KontoDataGridEntry> _eigenkapitalSoll;
-        public List<KontoDataGridEntry> EigenkapitalSoll
+        private List<HBKontoDataGridEntry> _eigenkapitalSoll;
+        public List<HBKontoDataGridEntry> EigenkapitalSoll
         {
             get { return _eigenkapitalSoll; }
             set
@@ -273,8 +273,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             }
         }
 
-        private List<KontoDataGridEntry> _eigenkapitalHaben;
-        public List<KontoDataGridEntry> EigenkapitalHaben
+        private List<HBKontoDataGridEntry> _eigenkapitalHaben;
+        public List<HBKontoDataGridEntry> EigenkapitalHaben
         {
             get { return _eigenkapitalHaben; }
             set
@@ -294,38 +294,38 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
 
             if (konto.Typ == Kontotyp.Anlagevermoegen || konto.Typ == Kontotyp.Umlaufvermoegen)
             {
-                object[] firstRowParam = { new KontoDataGridEntry { Bezeichnung = "AB", Betrag = konto.Anfangsbestand} };
+                object[] firstRowParam = { new HBKontoDataGridEntry { Bezeichnung = "AB", Betrag = konto.Anfangsbestand} };
 
                 sollListAddMethodInfo.Invoke(sollListobj, firstRowParam);
 
                 foreach (float wert in konto.AenderungenPositiv)
                 {
-                    object[] positiveValue = { new KontoDataGridEntry { Bezeichnung = "", Betrag = wert } };
+                    object[] positiveValue = { new HBKontoDataGridEntry { Bezeichnung = "", Betrag = wert } };
                     sollListAddMethodInfo.Invoke(sollListobj, positiveValue);
                 }
 
                 foreach (float wert in konto.AenderungenNegativ)
                 {
-                    object[] negativeValue = { new KontoDataGridEntry { Bezeichnung = "", Betrag = wert } };
+                    object[] negativeValue = { new HBKontoDataGridEntry { Bezeichnung = "", Betrag = wert } };
                     habenListAddMethodInfo.Invoke(habenListobj, negativeValue);
                 }
             }
 
             if (konto.Typ == Kontotyp.Fremdkapital || konto.Typ == Kontotyp.Eigenkapital)
             {
-                object[] values = { new KontoDataGridEntry { Bezeichnung = "AB", Betrag = konto.Anfangsbestand } };
+                object[] values = { new HBKontoDataGridEntry { Bezeichnung = "AB", Betrag = konto.Anfangsbestand } };
 
                 habenListAddMethodInfo.Invoke(habenListobj, values);
 
                 foreach (float wert in konto.AenderungenPositiv)
                 {
-                    object[] positiveValue = { new KontoDataGridEntry { Bezeichnung = "", Betrag = wert } };
+                    object[] positiveValue = { new HBKontoDataGridEntry { Bezeichnung = "", Betrag = wert } };
                     habenListAddMethodInfo.Invoke(habenListobj, positiveValue);
                 }
 
                 foreach (float wert in konto.AenderungenNegativ)
                 {
-                    object[] negativeValue = { new KontoDataGridEntry { Bezeichnung = "", Betrag = wert } };
+                    object[] negativeValue = { new HBKontoDataGridEntry { Bezeichnung = "", Betrag = wert } };
                     sollListAddMethodInfo.Invoke(sollListobj, negativeValue);
                 }
             }

@@ -55,16 +55,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\EnumRestrictConverter.cs" />
     <Compile Include="Model\Buchungssatz.cs" />
     <Compile Include="Model\BuchungssatzDataGridEntry.cs" />
+    <Compile Include="Model\EBKontoDataGridEntry.cs" />
     <Compile Include="Model\ERBilanzModel.cs" />
     <Compile Include="Model\EroeffnungsBilanzModel.cs" />
     <Compile Include="Model\KontenModel.cs" />
     <Compile Include="Model\Konto.cs" />
-    <Compile Include="Model\KontoDataGridEntry.cs" />
+    <Compile Include="Model\HBKontoDataGridEntry.cs" />
     <Compile Include="Model\Kontoname.cs" />
     <Compile Include="Model\Kontotyp.cs" />
     <Compile Include="ViewModel\ERBilanzViewModel.cs" />
+    <Compile Include="ViewModel\EroeffnungsBilanzViewModel.cs" />
     <Compile Include="ViewModel\KontenViewModel.cs" />
     <Compile Include="View\ERBilanzView.xaml.cs">
       <DependentUpon>ERBilanzView.xaml</DependentUpon>

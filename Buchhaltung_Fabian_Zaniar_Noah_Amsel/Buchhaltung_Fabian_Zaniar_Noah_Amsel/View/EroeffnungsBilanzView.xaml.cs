@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,11 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.View
     /// </summary>
     public partial class EroeffnungsBilanzView : Window
     {
-        public EroeffnungsBilanzView()
+        public EroeffnungsBilanzView(List<Konto> konten)
         {
             InitializeComponent();
+
+            this.DataContext = new ViewModel.EroeffnungsBilanzViewModel(konten);
         }
     }
 }

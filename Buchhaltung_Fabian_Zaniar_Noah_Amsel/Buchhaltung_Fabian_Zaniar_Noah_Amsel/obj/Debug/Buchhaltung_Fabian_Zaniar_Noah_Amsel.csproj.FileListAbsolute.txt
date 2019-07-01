@@ -73,3 +73,4 @@ C:\Users\Zaniko\Desktop\Buchhaltung-master\Buchhaltung_Fabian_Zaniar_Noah_Amsel\
 C:\Users\Zaniko\Desktop\Buchhaltung-master\Buchhaltung_Fabian_Zaniar_Noah_Amsel\Buchhaltung_Fabian_Zaniar_Noah_Amsel\obj\Debug\Buchhaltung_Fabian_Zaniar_Noah_Amsel.pdb
 C:\Dev\Buchhaltung\Buchhaltung_Fabian_Zaniar_Noah_Amsel\Buchhaltung_Fabian_Zaniar_Noah_Amsel\obj\Debug\View\EroeffnungsBilanzView.g.cs
 C:\Dev\Buchhaltung\Buchhaltung_Fabian_Zaniar_Noah_Amsel\Buchhaltung_Fabian_Zaniar_Noah_Amsel\obj\Debug\View\EroeffnungsBilanzView.baml
+C:\Dev\Buchhaltung\Buchhaltung_Fabian_Zaniar_Noah_Amsel\Buchhaltung_Fabian_Zaniar_Noah_Amsel\obj\Debug\GeneratedInternalTypeHelper.g.cs
