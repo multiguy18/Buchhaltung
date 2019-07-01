@@ -294,40 +294,48 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
 
             if (konto.Typ == Kontotyp.Anlagevermoegen || konto.Typ == Kontotyp.Umlaufvermoegen)
             {
-                object[] firstRowParam = { new HBKontoDataGridEntry { Bezeichnung = "AB", Betrag = konto.Anfangsbestand} };
+                object[] abRowParam = { new HBKontoDataGridEntry { Bezeichnung = "AB", Betrag = konto.Anfangsbestand} };
 
-                sollListAddMethodInfo.Invoke(sollListobj, firstRowParam);
+                sollListAddMethodInfo.Invoke(sollListobj, abRowParam);
 
                 foreach (float wert in konto.AenderungenPositiv)
                 {
-                    object[] positiveValue = { new HBKontoDataGridEntry { Bezeichnung = "", Betrag = wert } };
-                    sollListAddMethodInfo.Invoke(sollListobj, positiveValue);
+                    object[] positiveEntryParam = { new HBKontoDataGridEntry { Bezeichnung = "", Betrag = wert } };
+                    sollListAddMethodInfo.Invoke(sollListobj, positiveEntryParam);
                 }
 
                 foreach (float wert in konto.AenderungenNegativ)
                 {
-                    object[] negativeValue = { new HBKontoDataGridEntry { Bezeichnung = "", Betrag = wert } };
-                    habenListAddMethodInfo.Invoke(habenListobj, negativeValue);
+                    object[] negativeEntryParam = { new HBKontoDataGridEntry { Bezeichnung = "", Betrag = wert } };
+                    habenListAddMethodInfo.Invoke(habenListobj, negativeEntryParam);
                 }
+
+                object[] sbRowParam = { new HBKontoDataGridEntry { Bezeichnung = "SB", Betrag = konto.Schlussbestand } };
+
+                habenListAddMethodInfo.Invoke(habenListobj, sbRowParam);
             }
 
             if (konto.Typ == Kontotyp.Fremdkapital || konto.Typ == Kontotyp.Eigenkapital)
             {
-                object[] values = { new HBKontoDataGridEntry { Bezeichnung = "AB", Betrag = konto.Anfangsbestand } };
+                object[] abRowParam = { new HBKontoDataGridEntry { Bezeichnung = "AB", Betrag = konto.Anfangsbestand } };
 
-                habenListAddMethodInfo.Invoke(habenListobj, values);
+                habenListAddMethodInfo.Invoke(habenListobj, abRowParam);
 
                 foreach (float wert in konto.AenderungenPositiv)
                 {
-                    object[] positiveValue = { new HBKontoDataGridEntry { Bezeichnung = "", Betrag = wert } };
-                    habenListAddMethodInfo.Invoke(habenListobj, positiveValue);
+                    object[] positiveEntryParam = { new HBKontoDataGridEntry { Bezeichnung = "", Betrag = wert } };
+                    habenListAddMethodInfo.Invoke(habenListobj, positiveEntryParam);
                 }
 
                 foreach (float wert in konto.AenderungenNegativ)
                 {
-                    object[] negativeValue = { new HBKontoDataGridEntry { Bezeichnung = "", Betrag = wert } };
-                    sollListAddMethodInfo.Invoke(sollListobj, negativeValue);
+                    object[] negativeEntryParam = { new HBKontoDataGridEntry { Bezeichnung = "", Betrag = wert } };
+                    sollListAddMethodInfo.Invoke(sollListobj, negativeEntryParam);
                 }
+
+                object[] sbRowParam = { new HBKontoDataGridEntry { Bezeichnung = "SB", Betrag = konto.Schlussbestand } };
+
+                sollListAddMethodInfo.Invoke(sollListobj, sbRowParam);
             }
         }
     }

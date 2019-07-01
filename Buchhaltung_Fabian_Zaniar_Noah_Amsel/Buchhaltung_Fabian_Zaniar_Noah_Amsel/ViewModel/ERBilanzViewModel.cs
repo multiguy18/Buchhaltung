@@ -53,6 +53,20 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             set { SetProperty(ref _ertragKonten, value); }
         }
 
+        private float _summeAktiv;
+        public float SummeAktiv
+        {
+            get { return this._summeAktiv; }
+            set { SetProperty(ref _summeAktiv, value); }
+        }
+
+        private float _summePassiv;
+        public float SummePassiv
+        {
+            get { return this._summePassiv; }
+            set { SetProperty(ref _summePassiv, value); }
+        }
+
         public ERBilanzViewModel(List<Konto> konten)
         {
             this.model = new Model.ERBilanzModel();
@@ -67,21 +81,25 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             foreach (Konto umlaufKonto in konten.Where(k => k.Typ == Kontotyp.Umlaufvermoegen))
             {
                 AktivKontenUmlauf.Add(umlaufKonto.Name.ToString("g") + "\t" + umlaufKonto.Schlussbestand);
+                SummeAktiv += umlaufKonto.Schlussbestand;
             }
             
             foreach (Konto anlageKonto in konten.Where(k => k.Typ == Kontotyp.Anlagevermoegen))
             {
                 AktivKontenAnlage.Add(anlageKonto.Name.ToString("g") + "\t" + anlageKonto.Schlussbestand);
+                SummeAktiv += anlageKonto.Schlussbestand;
             }
 
             foreach (Konto fremdKonto in konten.Where(k => k.Typ == Kontotyp.Fremdkapital))
             {
                 PassivKontenFremd.Add(fremdKonto.Name.ToString("g") + "\t" + fremdKonto.Schlussbestand);
+                SummePassiv += fremdKonto.Schlussbestand;
             }
 
             foreach (Konto eigenKonto in konten.Where(k => k.Typ == Kontotyp.Eigenkapital))
             {
                 PassivKontenEigen.Add(eigenKonto.Name.ToString("g") + "\t" + eigenKonto.Schlussbestand);
+                SummePassiv += eigenKonto.Schlussbestand;
             }
         }
     }

@@ -106,6 +106,11 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             float summePassiven = 0;
             float eigenkapitalSumme = 0;
 
+            foreach (Konto konto in _konten)
+            {
+                konto.Anfangsbestand = 0;
+            }
+
             foreach (EBKontoDataGridEntry kontoEntry in AktivKontenUmlauf)
             {
                 Konto kontoAktivUmlauf = _konten.Single(k => k.Name == kontoEntry.Konto);

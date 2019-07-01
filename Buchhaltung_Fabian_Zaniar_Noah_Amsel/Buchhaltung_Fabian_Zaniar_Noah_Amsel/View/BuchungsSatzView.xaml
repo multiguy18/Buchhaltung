@@ -58,9 +58,9 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <Button Grid.Column="1" Grid.Row="5" Content="Eröffungsbilanz öffnen" Margin="60, 0, 60, 0" Command="{Binding OpenEroeffnungsBilanzCmd}"/>
-        <Button Grid.Column="2" Grid.Row="5" Content="Kontenplan öffnen" Margin="60, 0, 60, 0" Command="{Binding OpenKontenPlanCmd}"/>
-        <Button Grid.Column="3" Grid.Row="5" Content="Bilanz, ER öffnen" Margin="60, 0, 60, 0" Command="{Binding OpenBilanzERCmd}" />
+        <Button Grid.Column="1" Grid.Row="5" Content="Eröffungsbilanz öffnen" Margin="30, 0, 30, 0" Command="{Binding OpenEroeffnungsBilanzCmd}"/>
+        <Button Grid.Column="2" Grid.Row="5" Content="Kontenplan öffnen" Margin="30, 0, 30, 0" Command="{Binding OpenKontenPlanCmd}"/>
+        <Button Grid.Column="3" Grid.Row="5" Content="Bilanz, ER öffnen" Margin="30, 0, 30, 0" Command="{Binding OpenBilanzERCmd}" />
     </Grid>
 </Window>
     
