@@ -11,7 +11,8 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
 {
     public class EroeffnungsBilanzViewModel : ViewModelBase
     {
-        List<Konto> _konten;
+        public event Action<string> ErrorMessageDialog;
+        private List<Konto> _konten;
 
         public EroeffnungsBilanzViewModel(List<Konto> konten)
         {
@@ -82,6 +83,11 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
                     PassivKontenFremd.Add(new EBKontoDataGridEntry { Konto = konto.Name, Anfangsbestand = konto.Anfangsbestand });
                 }
             }
+
+            foreach (Konto konto in _konten.Where(k => k.Typ == Kontotyp.Eigenkapital))
+            {
+                PassivKontenEigen.Add(new EBKontoDataGridEntry { Konto = konto.Name, Anfangsbestand = konto.Anfangsbestand });
+            }
         }
 
         private void CollectionChangedHandler(object sender, NotifyCollectionChangedEventArgs e)
@@ -96,22 +102,46 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
 
         private void DatagridChanged()
         {
+            float summeAktiven = 0;
+            float summePassiven = 0;
+            float eigenkapitalSumme = 0;
+
             foreach (EBKontoDataGridEntry kontoEntry in AktivKontenUmlauf)
             {
-                Konto konto = _konten.Single(k => k.Name == kontoEntry.Konto);
-                konto.Anfangsbestand = kontoEntry.Anfangsbestand;
+                Konto kontoAktivUmlauf = _konten.Single(k => k.Name == kontoEntry.Konto);
+                kontoAktivUmlauf.Anfangsbestand = kontoEntry.Anfangsbestand;
+                summeAktiven += kontoEntry.Anfangsbestand;
             }
 
             foreach (EBKontoDataGridEntry kontoEntry in AktivKontenAnlage)
             {
-                Konto konto = _konten.Single(k => k.Name == kontoEntry.Konto);
-                konto.Anfangsbestand = kontoEntry.Anfangsbestand;
+                Konto kontoAktivAnlage = _konten.Single(k => k.Name == kontoEntry.Konto);
+                kontoAktivAnlage.Anfangsbestand = kontoEntry.Anfangsbestand;
+                summeAktiven += kontoEntry.Anfangsbestand;
             }
 
             foreach (EBKontoDataGridEntry kontoEntry in PassivKontenFremd)
             {
-                Konto konto = _konten.Single(k => k.Name == kontoEntry.Konto);
-                konto.Anfangsbestand = kontoEntry.Anfangsbestand;
+                Konto kontoPassivFremd = _konten.Single(k => k.Name == kontoEntry.Konto);
+                kontoPassivFremd.Anfangsbestand = kontoEntry.Anfangsbestand;
+                summePassiven += kontoEntry.Anfangsbestand;
+            }
+
+            eigenkapitalSumme = summeAktiven - summePassiven;
+
+            if (eigenkapitalSumme < 0)
+            {
+                ErrorMessageDialog("Das Eigenkapital hat den Wert von 0 unterschritten.");
+            }
+
+            Konto eigenkapitalKonto = _konten.Single(k => k.Name == Kontoname.Eigenkapital);
+            eigenkapitalKonto.Anfangsbestand = eigenkapitalSumme;
+
+            PassivKontenEigen.Clear();
+
+            foreach (Konto konto in _konten.Where(k => k.Typ == Kontotyp.Eigenkapital))
+            {
+                PassivKontenEigen.Add(new EBKontoDataGridEntry { Konto = konto.Name, Anfangsbestand = konto.Anfangsbestand });
             }
         }
     }

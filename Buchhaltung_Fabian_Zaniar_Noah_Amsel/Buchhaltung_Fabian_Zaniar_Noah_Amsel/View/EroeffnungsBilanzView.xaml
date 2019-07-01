@@ -125,7 +125,7 @@
                         </DataGridTemplateColumn>
                     </DataGrid.Columns>
                 </DataGrid>
-                <DataGrid Grid.Row="4" Grid.Column="2" MinHeight="108" ItemsSource="{Binding PassivKontenEigen}" AutoGenerateColumns="False">
+                <DataGrid Grid.Row="4" Grid.Column="2" MinHeight="108" ItemsSource="{Binding PassivKontenEigen}" AutoGenerateColumns="False" IsReadOnly="True">
                     <DataGrid.Columns>
                         <DataGridComboBoxColumn Header="Konto" Width="2*"
                                 ItemsSource="{Binding Source={StaticResource kontoname}}"
