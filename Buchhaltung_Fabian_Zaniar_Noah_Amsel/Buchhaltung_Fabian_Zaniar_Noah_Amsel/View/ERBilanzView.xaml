@@ -49,10 +49,13 @@
                 <Label Grid.ColumnSpan="3" Background="Black"/>
                 <Label Grid.Column="1" Grid.Row="1" Background="Black" Grid.RowSpan="5"/>
                 
-                <DataGrid Grid.Row="2" Grid.Column="2" MinHeight="108" ItemsSource="{Binding Path=PassivKontenFremd}" AutoGenerateColumns="False">
+                <DataGrid Grid.Row="2" Grid.Column="2" MinHeight="108" ItemsSource="{Binding Path=PassivKontenFremd}" AutoGenerateColumns="False" IsReadOnly="True">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding}" 
-                                Foreground="Black" Width="*" Header="" IsReadOnly="true">
+                        <DataGridTextColumn Binding="{Binding Konto}" 
+                                Foreground="Black" Width="3*" Header="" IsReadOnly="true">
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding Schlussbestand}" 
+                                Foreground="Black" Width="2*" Header="" IsReadOnly="true">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="TextBlock">
                                     <Setter Property="HorizontalAlignment" Value="Right"></Setter>
@@ -61,10 +64,13 @@
                         </DataGridTextColumn>
                     </DataGrid.Columns>
                 </DataGrid>
-                <DataGrid Grid.Row="2" Grid.Column="0" MinHeight="108" ItemsSource="{Binding Path=AktivKontenUmlauf}" AutoGenerateColumns="False">
+                <DataGrid Grid.Row="2" Grid.Column="0" MinHeight="108" ItemsSource="{Binding Path=AktivKontenUmlauf}" AutoGenerateColumns="False" IsReadOnly="True">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding}" 
-                                Foreground="Black" Width="*" Header="" IsReadOnly="true">
+                        <DataGridTextColumn Binding="{Binding Konto}" 
+                                Foreground="Black" Width="3*" Header="" IsReadOnly="true">
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding Schlussbestand}" 
+                                Foreground="Black" Width="2*" Header="" IsReadOnly="true">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="TextBlock">
                                     <Setter Property="HorizontalAlignment" Value="Right"></Setter>
@@ -73,10 +79,13 @@
                         </DataGridTextColumn>
                     </DataGrid.Columns>
                 </DataGrid>
-                <DataGrid Grid.Row="4" MinHeight="108" ItemsSource="{Binding Path=AktivKontenAnlage}" AutoGenerateColumns="False">
+                <DataGrid Grid.Row="4" MinHeight="108" ItemsSource="{Binding Path=AktivKontenAnlage}" AutoGenerateColumns="False" IsReadOnly="True">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding}" 
-                                Foreground="Black" Width="*" Header="" IsReadOnly="true">
+                        <DataGridTextColumn Binding="{Binding Konto}" 
+                                Foreground="Black" Width="3*" Header="" IsReadOnly="true">
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding Schlussbestand}" 
+                                Foreground="Black" Width="2*" Header="" IsReadOnly="true">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="TextBlock">
                                     <Setter Property="HorizontalAlignment" Value="Right"></Setter>
@@ -85,10 +94,13 @@
                         </DataGridTextColumn>
                     </DataGrid.Columns>
                 </DataGrid>
-                <DataGrid Grid.Row="4" Grid.Column="2" MinHeight="108" ItemsSource="{Binding Path=PassivKontenEigen}" AutoGenerateColumns="False">
+                <DataGrid Grid.Row="4" Grid.Column="2" MinHeight="108" ItemsSource="{Binding Path=PassivKontenEigen}" AutoGenerateColumns="False" IsReadOnly="True" >
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding}" 
-                                Foreground="Black" Width="*" Header="" IsReadOnly="true">
+                        <DataGridTextColumn Binding="{Binding Konto}" 
+                                Foreground="Black" Width="3*" Header="" IsReadOnly="true">
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding Schlussbestand}" 
+                                Foreground="Black" Width="2*" Header="" IsReadOnly="true">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="TextBlock">
                                     <Setter Property="HorizontalAlignment" Value="Right"></Setter>

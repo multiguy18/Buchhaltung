@@ -25,11 +25,12 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.View
             InitializeComponent();
 
             this.DataContext = new ViewModel.EroeffnungsBilanzViewModel(konten);
+            (DataContext as ViewModel.EroeffnungsBilanzViewModel).ErrorMessageDialog += EroeffnungsBilanzView_ErrorMessageDialog;
         }
 
-        private void btReturn_Click(object sender, RoutedEventArgs e)
+        private void EroeffnungsBilanzView_ErrorMessageDialog(string message)
         {
-            this.Close();
+            MessageBox.Show(message, "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }

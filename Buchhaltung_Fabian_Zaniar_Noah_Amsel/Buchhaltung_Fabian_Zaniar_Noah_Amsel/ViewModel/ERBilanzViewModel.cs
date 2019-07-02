@@ -11,29 +11,29 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
     {
         Model.ERBilanzModel model;
 
-        private List<string> _aktivKontenUmlauf;
-        public List<string> AktivKontenUmlauf
+        private List<SBKontoDataGridEntry> _aktivKontenUmlauf;
+        public List<SBKontoDataGridEntry> AktivKontenUmlauf
         {
             get { return this._aktivKontenUmlauf; }
             set { SetProperty(ref _aktivKontenUmlauf, value); }
         }
 
-        private List<string> _aktivKontenAnlage;
-        public List<string> AktivKontenAnlage
+        private List<SBKontoDataGridEntry> _aktivKontenAnlage;
+        public List<SBKontoDataGridEntry> AktivKontenAnlage
         {
             get { return this._aktivKontenAnlage; }
             set { SetProperty(ref _aktivKontenAnlage, value); }
         }
 
-        private List<string> _passivKontenFremd;
-        public List<string> PassivKontenFremd
+        private List<SBKontoDataGridEntry> _passivKontenFremd;
+        public List<SBKontoDataGridEntry> PassivKontenFremd
         {
             get { return this._passivKontenFremd; }
             set { SetProperty(ref _passivKontenFremd, value); }
         }
 
-        private List<string> _passivKontenEigen;
-        public List<string> PassivKontenEigen
+        private List<SBKontoDataGridEntry> _passivKontenEigen;
+        public List<SBKontoDataGridEntry> PassivKontenEigen
         {
             get { return this._passivKontenEigen; }
             set { SetProperty(ref _passivKontenEigen, value); }
@@ -71,34 +71,44 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         {
             this.model = new Model.ERBilanzModel();
 
-            AktivKontenUmlauf = new List<string>();
-            AktivKontenAnlage = new List<string>();
-            PassivKontenFremd = new List<string>();
-            PassivKontenEigen = new List<string>();
+            AktivKontenUmlauf = new List<SBKontoDataGridEntry>();
+            AktivKontenAnlage = new List<SBKontoDataGridEntry>();
+            PassivKontenFremd = new List<SBKontoDataGridEntry>();
+            PassivKontenEigen = new List<SBKontoDataGridEntry>();
             AufwandKonten = new List<string>();
             ErtragKonten = new List<string>();
 
             foreach (Konto umlaufKonto in konten.Where(k => k.Typ == Kontotyp.Umlaufvermoegen))
             {
-                AktivKontenUmlauf.Add(umlaufKonto.Name.ToString("g") + "\t" + umlaufKonto.Schlussbestand);
-                SummeAktiv += umlaufKonto.Schlussbestand;
+                if (umlaufKonto.Schlussbestand != 0)
+                {
+                    AktivKontenUmlauf.Add(new SBKontoDataGridEntry() { Konto = umlaufKonto.Name.ToString("g"), Schlussbestand = umlaufKonto.Schlussbestand });
+                    SummeAktiv += umlaufKonto.Schlussbestand;
+                }
             }
             
             foreach (Konto anlageKonto in konten.Where(k => k.Typ == Kontotyp.Anlagevermoegen))
             {
-                AktivKontenAnlage.Add(anlageKonto.Name.ToString("g") + "\t" + anlageKonto.Schlussbestand);
-                SummeAktiv += anlageKonto.Schlussbestand;
+                if (anlageKonto.Schlussbestand != 0)
+                {
+                    AktivKontenAnlage.Add(new SBKontoDataGridEntry() { Konto = anlageKonto.Name.ToString("g"), Schlussbestand = anlageKonto.Schlussbestand });
+                    SummeAktiv += anlageKonto.Schlussbestand;
+                }
             }
 
             foreach (Konto fremdKonto in konten.Where(k => k.Typ == Kontotyp.Fremdkapital))
             {
-                PassivKontenFremd.Add(fremdKonto.Name.ToString("g") + "\t" + fremdKonto.Schlussbestand);
-                SummePassiv += fremdKonto.Schlussbestand;
+                if (fremdKonto.Schlussbestand != 0)
+                {
+                    PassivKontenFremd.Add(new SBKontoDataGridEntry() { Konto = fremdKonto.Name.ToString("g"), Schlussbestand = fremdKonto.Schlussbestand });
+                    SummePassiv += fremdKonto.Schlussbestand;
+                }
+
             }
 
             foreach (Konto eigenKonto in konten.Where(k => k.Typ == Kontotyp.Eigenkapital))
             {
-                PassivKontenEigen.Add(eigenKonto.Name.ToString("g") + "\t" + eigenKonto.Schlussbestand);
+                PassivKontenEigen.Add(new SBKontoDataGridEntry() { Konto = eigenKonto.Name.ToString("g"), Schlussbestand = eigenKonto.Schlussbestand });
                 SummePassiv += eigenKonto.Schlussbestand;
             }
         }

@@ -66,6 +66,7 @@
     <Compile Include="Model\HBKontoDataGridEntry.cs" />
     <Compile Include="Model\Kontoname.cs" />
     <Compile Include="Model\Kontotyp.cs" />
+    <Compile Include="Model\SBKontoDataGridEntry.cs" />
     <Compile Include="ViewModel\ERBilanzViewModel.cs" />
     <Compile Include="ViewModel\EroeffnungsBilanzViewModel.cs" />
     <Compile Include="ViewModel\KontenViewModel.cs" />

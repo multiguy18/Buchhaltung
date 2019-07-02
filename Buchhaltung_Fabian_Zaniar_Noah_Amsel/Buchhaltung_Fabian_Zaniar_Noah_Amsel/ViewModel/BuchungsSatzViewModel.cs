@@ -33,7 +33,7 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             _konten.Add(new Konto(Kontoname.Post, Kontotyp.Umlaufvermoegen, 1020));
             _konten.Add(new Konto(Kontoname.Bank, Kontotyp.Umlaufvermoegen, 1021));
             _konten.Add(new Konto(Kontoname.FLL, Kontotyp.Umlaufvermoegen, 1100));
-            _konten.Add(new Konto(Kontoname.Warenbestand, Kontotyp.Anlagevermoegen, 1200));
+            _konten.Add(new Konto(Kontoname.Warenbestand, Kontotyp.Umlaufvermoegen, 1200));
             _konten.Add(new Konto(Kontoname.Mobilien, Kontotyp.Anlagevermoegen, 1510));
             _konten.Add(new Konto(Kontoname.Immobilien, Kontotyp.Anlagevermoegen, 1600));
             _konten.Add(new Konto(Kontoname.VLL, Kontotyp.Fremdkapital, 2000));
@@ -139,6 +139,7 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
         private void OpenEroeffnungsBilanz()
         {
             this.model.OpenEroeffnungsBilanzView(_konten);
+            DataGridChanged();
         }
 
         private void OpenKtPlan()
