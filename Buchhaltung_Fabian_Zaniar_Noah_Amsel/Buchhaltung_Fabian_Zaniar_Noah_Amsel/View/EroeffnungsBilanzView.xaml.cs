@@ -26,5 +26,10 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.View
 
             this.DataContext = new ViewModel.EroeffnungsBilanzViewModel(konten);
         }
+
+        private void btReturn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

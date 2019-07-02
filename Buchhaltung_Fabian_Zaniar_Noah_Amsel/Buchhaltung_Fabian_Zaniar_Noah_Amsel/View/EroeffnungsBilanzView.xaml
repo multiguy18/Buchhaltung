@@ -158,5 +158,6 @@
 
             </Grid>
         </Grid>
+        <Button x:Name="btReturn" Grid.Column="2" Grid.Row="1" Width="80" Height="20" Content="Zurück" Click="btReturn_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
     </Grid>
 </Window>

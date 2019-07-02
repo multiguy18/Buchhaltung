@@ -11,7 +11,7 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.Model
         public void OpenEroeffnungsBilanzView(List<Konto> konten)
         {
             View.EroeffnungsBilanzView view = new View.EroeffnungsBilanzView(konten);
-            view.Show();
+            view.ShowDialog();
         }
 
         public void OpenKontenView(List<Konto> konten)
