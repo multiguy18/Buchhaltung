@@ -8,7 +8,7 @@
         xmlns:conv="clr-namespace:Buchhaltung_Fabian_Zaniar_Noah_Amsel.Converters"
         xmlns:local="clr-namespace:Buchhaltung_Fabian_Zaniar_Noah_Amsel.View"
         mc:Ignorable="d"
-        Title="Eröffnungsbilanz" Height="450" Width="400">
+        Title="Eröffnungsbilanz" Height="500" Width="450">
     <Window.Resources>
         <ObjectDataProvider x:Key="kontoname" 
                         MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
@@ -38,7 +38,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Label Content="A" />
-            <Label Grid.Column="1" Content="Bilanz" HorizontalAlignment="Center" />
+            <Label Grid.Column="1" Content="Eröffnungsbilanz" HorizontalAlignment="Center" />
             <Label Grid.Column="2" Content="P" HorizontalAlignment="Right"/>
 
             <Grid Grid.Row="1" Grid.ColumnSpan="3">

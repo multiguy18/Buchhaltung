@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Buchhaltung_Fabian_Zaniar_Noah_Amsel.View"
         mc:Ignorable="d"
-        Title="Bilanz / Erfolgsrechnung" Height="450" Width="800">
+        Title="Schlussbilanz / Erfolgsrechnung" Height="450" Width="800">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -28,7 +28,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Label Content="A" />
-            <Label Grid.Column="1" Content="Bilanz" HorizontalAlignment="Center" />
+            <Label Grid.Column="1" Content="Schlussbilanz" HorizontalAlignment="Center" />
             <Label Grid.Column="2" Content="P" HorizontalAlignment="Right"/>
 
             <Grid Grid.Row="1" Grid.ColumnSpan="3">
