@@ -151,8 +151,8 @@
                 <Label Content="Anlagevermögen" Grid.Row="3" Grid.Column="0"/>
                 <Label Content="Eigenkapital" Grid.Column="2" Grid.Row="3"/>
                 <Label Grid.Column="1" Grid.Row="1" Background="Black"/>
-                <TextBox x:Name="txtSummeAktiv" Grid.Row="5" TextWrapping="Wrap" Text="0" Grid.Column="0" IsReadOnly="True" TextAlignment="Right"/>
-                <TextBox x:Name="txtSummePassiv" Grid.Row="5" TextWrapping="Wrap" Text="0" Grid.Column="2" IsReadOnly="True" TextAlignment="Right"/>
+                <TextBox x:Name="txtSummeAktiv" Grid.Row="5" TextWrapping="Wrap" Text="{Binding SummeAktiv}" Grid.Column="0" IsReadOnly="True" TextAlignment="Right"/>
+                <TextBox x:Name="txtSummePassiv" Grid.Row="5" TextWrapping="Wrap" Text="{Binding SummePassiv}" Grid.Column="2" IsReadOnly="True" TextAlignment="Right"/>
                 <Label Grid.ColumnSpan="3" Background="Black" Grid.Row="4" Height="3" VerticalAlignment="Bottom"/>
                 <Label Content="Umlaufvermögen" Grid.Column="0" Grid.Row="1"/>
 

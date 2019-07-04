@@ -58,13 +58,31 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             set { SetProperty(ref _passivKontenEigen, value); }
         }
 
+        private float _summeAktiv;
+        public float SummeAktiv
+        {
+            get { return this._summeAktiv; }
+            set { SetProperty(ref _summeAktiv, value); }
+        }
+
+        private float _summePassiv;
+        public float SummePassiv
+        {
+            get { return this._summePassiv; }
+            set { SetProperty(ref _summePassiv, value); }
+        }
+
         private void GenerateKontenABs()
         {
+            SummeAktiv = 0;
+            SummePassiv = 0;
+
             foreach (Konto konto in _konten.Where(k => k.Typ == Kontotyp.Umlaufvermoegen))
             {
                 if (konto.Anfangsbestand != 0)
                 {
                     AktivKontenUmlauf.Add(new EBKontoDataGridEntry { Konto = konto.Name, Anfangsbestand = konto.Anfangsbestand });
+                    SummeAktiv += konto.Anfangsbestand;
                 }
             }
 
@@ -73,6 +91,7 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
                 if (konto.Anfangsbestand != 0)
                 {
                     AktivKontenAnlage.Add(new EBKontoDataGridEntry { Konto = konto.Name, Anfangsbestand = konto.Anfangsbestand });
+                    SummeAktiv += konto.Anfangsbestand;
                 }
             }
 
@@ -81,12 +100,14 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
                 if (konto.Anfangsbestand != 0)
                 {
                     PassivKontenFremd.Add(new EBKontoDataGridEntry { Konto = konto.Name, Anfangsbestand = konto.Anfangsbestand });
+                    SummePassiv += konto.Anfangsbestand;
                 }
             }
 
             foreach (Konto konto in _konten.Where(k => k.Typ == Kontotyp.Eigenkapital))
             {
                 PassivKontenEigen.Add(new EBKontoDataGridEntry { Konto = konto.Name, Anfangsbestand = konto.Anfangsbestand });
+                SummePassiv += konto.Anfangsbestand;
             }
         }
 
@@ -105,6 +126,9 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             float summeAktiven = 0;
             float summePassiven = 0;
             float eigenkapitalSumme = 0;
+            
+            SummeAktiv = 0;
+            SummePassiv = 0;
 
             foreach (Konto konto in _konten)
             {
@@ -116,6 +140,7 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
                 Konto kontoAktivUmlauf = _konten.Single(k => k.Name == kontoEntry.Konto);
                 kontoAktivUmlauf.Anfangsbestand = kontoEntry.Anfangsbestand;
                 summeAktiven += kontoEntry.Anfangsbestand;
+                SummeAktiv += kontoEntry.Anfangsbestand;
             }
 
             foreach (EBKontoDataGridEntry kontoEntry in AktivKontenAnlage)
@@ -123,6 +148,7 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
                 Konto kontoAktivAnlage = _konten.Single(k => k.Name == kontoEntry.Konto);
                 kontoAktivAnlage.Anfangsbestand = kontoEntry.Anfangsbestand;
                 summeAktiven += kontoEntry.Anfangsbestand;
+                SummeAktiv += kontoEntry.Anfangsbestand;
             }
 
             foreach (EBKontoDataGridEntry kontoEntry in PassivKontenFremd)
@@ -130,6 +156,7 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
                 Konto kontoPassivFremd = _konten.Single(k => k.Name == kontoEntry.Konto);
                 kontoPassivFremd.Anfangsbestand = kontoEntry.Anfangsbestand;
                 summePassiven += kontoEntry.Anfangsbestand;
+                SummePassiv += kontoEntry.Anfangsbestand;
             }
 
             eigenkapitalSumme = summeAktiven - summePassiven;
@@ -147,6 +174,7 @@ namespace Buchhaltung_Fabian_Zaniar_Noah_Amsel.ViewModel
             foreach (Konto konto in _konten.Where(k => k.Typ == Kontotyp.Eigenkapital))
             {
                 PassivKontenEigen.Add(new EBKontoDataGridEntry { Konto = konto.Name, Anfangsbestand = konto.Anfangsbestand });
+                SummePassiv += konto.Anfangsbestand;
             }
         }
     }
